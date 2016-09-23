@@ -45,8 +45,9 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 export VIRTUAL_ENV_DISABLE_PROMPT=true
 export ADDON_SDK_PATH=$HOME/src/addon-sdk
-export GOPATH=$HOME/.golang
-export PATH=$PATH:$GOPATH/bin
+export GOPATH=$HOME/golang
+export GOROOT=/usr/local/opt/go/libexec
+export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
 if [ -f /usr/local/bin/virtualenvwrapper.sh ]; then
     source /usr/local/bin/virtualenvwrapper.sh
